@@ -123,6 +123,7 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
 
+    /* ADVANCED SLIDESHOW */
     .slider-box {
       flex: 1.2;
       background: linear-gradient(135deg, #0f1115, #1b1e24);
@@ -145,19 +146,35 @@
       object-fit: cover;
       position: absolute;
       opacity: 0;
-      animation: fadeSlide 15s infinite;
+      animation: advancedSlide 68s infinite;
       border-radius: 10px;
     }
 
+    /* 17 images → each image gets its own delay */
     .slider-container img:nth-child(1) { animation-delay: 0s; }
-    .slider-container img:nth-child(2) { animation-delay: 5s; }
-    .slider-container img:nth-child(3) { animation-delay: 10s; }
+    .slider-container img:nth-child(2) { animation-delay: 4s; }
+    .slider-container img:nth-child(3) { animation-delay: 8s; }
+    .slider-container img:nth-child(4) { animation-delay: 12s; }
+    .slider-container img:nth-child(5) { animation-delay: 16s; }
+    .slider-container img:nth-child(6) { animation-delay: 20s; }
+    .slider-container img:nth-child(7) { animation-delay: 24s; }
+    .slider-container img:nth-child(8) { animation-delay: 28s; }
+    .slider-container img:nth-child(9) { animation-delay: 32s; }
+    .slider-container img:nth-child(10) { animation-delay: 36s; }
+    .slider-container img:nth-child(11) { animation-delay: 40s; }
+    .slider-container img:nth-child(12) { animation-delay: 44s; }
+    .slider-container img:nth-child(13) { animation-delay: 48s; }
+    .slider-container img:nth-child(14) { animation-delay: 52s; }
+    .slider-container img:nth-child(15) { animation-delay: 56s; }
+    .slider-container img:nth-child(16) { animation-delay: 60s; }
+    .slider-container img:nth-child(17) { animation-delay: 64s; }
 
-    @keyframes fadeSlide {
-      0% { opacity: 0; }
-      10% { opacity: 1; }
-      30% { opacity: 1; }
-      40% { opacity: 0; }
+    /* ADVANCED ANIMATION: fade + zoom + slide */
+    @keyframes advancedSlide {
+      0% { opacity: 0; transform: scale(1.05) translateX(20px); }
+      10% { opacity: 1; transform: scale(1) translateX(0); }
+      30% { opacity: 1; transform: scale(1.05) translateX(-20px); }
+      40% { opacity: 0; transform: scale(1.1) translateX(-40px); }
       100% { opacity: 0; }
     }
 
@@ -358,55 +375,21 @@
 
     <div class="slider-box">
       <div class="slider-container">
-        <img src="IMAGE_URL_1">
-        <img src="IMAGE_URL_2">
-        <img src="IMAGE_URL_3">
-      </div>
-    </div>
 
-    <div class="info-box">
-      <h3 style="margin-bottom:8px; font-size:1.1rem;">Project Showcase</h3>
-      <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
-        Research projects, GIS analysis, fieldwork, and professional contributions.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- BLOCK 3: FOOTER CTA -->
-  <footer class="footer-cta-container">
-
-    <h2 class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
-
-    <p class="cta-subtext">
-      Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.
-    </p>
-
-    <div class="button-group">
-      <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
-        <i class="fa-solid fa-envelope"></i> Email Me
-      </a>
-
-      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-
-      <a href="https://github.com/oluwasegunonibudo"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-    </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      © 2026 Oluwasegun Onibudo. All rights reserved.
-    </div>
-
-  </footer>
-
-</body>
-</html>
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class5.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class1.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class10.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class11.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class12.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class13.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class14.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class15.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class16.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class17.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class2.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class3.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class4.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class6.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class7.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class8.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluw
