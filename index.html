@@ -1,42 +1,405 @@
-<!-- BLOCK 2: SLIDESHOW -->
-<div id="projects" class="section-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oluwasegun Onibudo - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="info-box">
-    <h3 style="margin-bottom:8px; font-size:1.1rem;">Tutorial Representation</h3>
-    <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
-      Images from my teachings, workshops, and training sessions.
-    </p>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #05070a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e2e8f0;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(135deg, #0f1115, #1b1e24);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .nav-left {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #70b3e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #70b3e8;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-btn {
+      color: #e2e8f0;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #1b1e24;
+      padding: 10px;
+      border-radius: 8px;
+      top: 28px;
+      min-width: 160px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 6px 0;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      color: #70b3e8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* SLIDESHOW SECTION */
+    .section-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .info-box {
+      flex: 1;
+      background: linear-gradient(135deg, #1B1E24, #282C37);
+      padding: 18px;
+      border-radius: 10px;
+      color: #E2E8F0;
+      text-align: center;
+      min-height: 300px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    /* ADVANCED SLIDESHOW */
+    .slider-box {
+      flex: 1.2;
+      background: linear-gradient(135deg, #0f1115, #1b1e24);
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .slider-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      animation: advancedSlide 68s infinite;
+      border-radius: 10px;
+    }
+
+    /* 17 images → each image gets its own delay */
+    .slider-container img:nth-child(1) { animation-delay: 0s; }
+    .slider-container img:nth-child(2) { animation-delay: 4s; }
+    .slider-container img:nth-child(3) { animation-delay: 8s; }
+    .slider-container img:nth-child(4) { animation-delay: 12s; }
+    .slider-container img:nth-child(5) { animation-delay: 16s; }
+    .slider-container img:nth-child(6) { animation-delay: 20s; }
+    .slider-container img:nth-child(7) { animation-delay: 24s; }
+    .slider-container img:nth-child(8) { animation-delay: 28s; }
+    .slider-container img:nth-child(9) { animation-delay: 32s; }
+    .slider-container img:nth-child(10) { animation-delay: 36s; }
+    .slider-container img:nth-child(11) { animation-delay: 40s; }
+    .slider-container img:nth-child(12) { animation-delay: 44s; }
+    .slider-container img:nth-child(13) { animation-delay: 48s; }
+    .slider-container img:nth-child(14) { animation-delay: 52s; }
+    .slider-container img:nth-child(15) { animation-delay: 56s; }
+    .slider-container img:nth-child(16) { animation-delay: 60s; }
+    .slider-container img:nth-child(17) { animation-delay: 64s; }
+
+    /* ADVANCED ANIMATION: fade + zoom + slide */
+    @keyframes advancedSlide {
+      0% { opacity: 0; transform: scale(1.05) translateX(20px); }
+      10% { opacity: 1; transform: scale(1) translateX(0); }
+      30% { opacity: 1; transform: scale(1.05) translateX(-20px); }
+      40% { opacity: 0; transform: scale(1.1) translateX(-40px); }
+      100% { opacity: 0; }
+    }
+
+    @media (max-width: 800px) {
+      .section-wrapper {
+        flex-direction: column;
+      }
+    }
+
+    /* FOOTER CTA */
+    .footer-cta-container {
+      background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
+      color: #E2E8F0;
+      padding: 32px 16px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 12px auto;
+      max-width: 900px;
+    }
+
+    .cta-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cta-subtext {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      max-width: 550px;
+      margin: 0 auto 22px;
+      line-height: 1.45;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #70B3E8;
+      color: #12161A;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+      border: 1px solid rgba(112, 179, 232, 0.3);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      max-width: 70%;
+      margin: 0 auto 16px;
+    }
+
+    .footer-bottom {
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">Oluwasegun Onibudo</div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Experiences ▾</div>
+        <div class="dropdown-content">
+          <a href="#research">Research Student</a>
+          <a href="#work">Work</a>
+          <a href="#teaching">Teaching</a>
+        </div>
+      </div>
+
+      <a href="#internship">Internship</a>
+      <a href="#projects">Project Page</a>
+      <a href="#maps">Maps</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Social Media ▾</div>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/oluwasegun-onibudo/" target="_blank">LinkedIn</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="slider-box">
-    <div class="slider-container">
+  <!-- BLOCK 1: INTRO -->
+  <div id="home" style="
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:20px 12px;
+    background:linear-gradient(135deg,#0f1115,#1b1e24);
+    color:#e2e8f0;
+    border-radius:12px;
+    box-sizing:border-box;
+  ">
 
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class5.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class1.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class10.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class11.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class12.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class13.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class14.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class15.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class16.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class17.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class2.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class3.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class4.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class6.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class7.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class8.jpg?raw=true">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class9.jpg?raw=true">
+    <div style="
+      display:grid;
+      grid-template-columns:1fr 0.8fr;
+      grid-template-rows:auto auto;
+      gap:18px;
+      align-items:start;
+      width:100%;
+      max-width:100%;
+      box-sizing:border-box;
+    ">
 
-    </div> <!-- closes slider-container -->
-  </div> <!-- closes slider-box -->
+      <div style="grid-column:1; grid-row:1;">
+        <h1 style="font-size:1.9rem; font-weight:700; margin-bottom:6px; color:white;">
+          Oluwasegun Onibudo
+        </h1>
 
-  <div class="info-box">
-    <h3 style="margin-bottom:8px; font-size:1.1rem;">Project Showcase</h3>
-    <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
-      Research projects, GIS analysis, fieldwork, and professional contributions.
-    </p>
+        <h2 style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
+          GIS Analyst • Cartographer • Remote Sensing Specialist
+        </h2>
+
+        <p style="font-size:0.9rem; line-height:1.45; margin-bottom:12px; color:#cbd5e1;">
+          I am a Geospatial Analyst with over seven years of experience transforming spatial data into actionable insights 
+          for environmental management, groundwater exploration, land administration, and sustainable development.
+        </p>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          My portfolio showcases the projects, research, maps, and professional experiences that define my journey in geospatial science.
+        </p>
+      </div>
+
+      <div style="grid-column:2; grid-row:1; text-align:center;">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Oluwasegun%20-%20Copy1-removebg-preview.jpg?raw=true"
+             alt="Oluwasegun Onibudo"
+             style="width:100%; max-width:260px; border-radius:10px; box-shadow:0 5px 16px rgba(0,0,0,0.45);">
+      </div>
+
+      <div style="grid-column:1; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          What I Do
+        </h3>
+
+        <ul style="list-style:none; padding:0; margin:0; color:#94a3b8; line-height:1.45; font-size:0.9rem;">
+          <li>Spatial Analysis & Modelling</li>
+          <li>Groundwater Potential Mapping</li>
+          <li>Remote Sensing & Image Interpretation</li>
+          <li>Digital Land Administration</li>
+          <li>Geospatial Intelligence</li>
+          <li>Cartography & Map Design</li>
+        </ul>
+      </div>
+
+      <div style="grid-column:2; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          Why I Do It
+        </h3>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          I believe geospatial science is a powerful tool for solving real‑world problems – from water scarcity to land governance.
+        </p>
+      </div>
+
+    </div>
   </div>
 
-</div> <!-- closes section-wrapper -->
+  <!-- BLOCK 2: SLIDESHOW -->
+  <div id="projects" class="section-wrapper">
+
+    <div class="info-box">
+      <h3 style="margin-bottom:8px; font-size:1.1rem;">Tutorial Representation</h3>
+      <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
+        Images from my teachings, workshops, and training sessions.
+      </p>
+    </div>
+
+    <div class="slider-box">
+      <div class="slider-container">
+
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class5.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class1.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class10.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class11.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class12.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class13.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class14.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class15.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class16.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class17.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class2.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class3.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class4.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class6.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class7.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class8.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class9.jpg?raw=true">
+
+      </div> <!-- closes slider-container -->
+    </div> <!-- closes slider-box -->
+
+    <div class="info-box">
+      <h3 style="margin-bottom:8px; font-size:1.1rem;">Project Showcase</h3>
+      <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
+        Research projects, GIS analysis, fieldwork, and professional contributions.
+      </p>
+    </div
