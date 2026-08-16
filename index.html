@@ -5,6 +5,7 @@
   <title>Oluwasegun Onibudo - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -76,18 +77,67 @@
       z-index: 10;
     }
 
+    .dropdown-content a {
+      display: block;
+      padding: 6px 0;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      color: #70b3e8;
+    }
+
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* TWO‑COLUMN SECTION */
+    @media (max-width: 800px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* INTRO BLOCK GRID */
+    #home {
+      width:100%;
+      max-width:100%;
+      overflow:hidden;
+      padding:20px 12px;
+      background:linear-gradient(135deg,#0f1115,#1b1e24);
+      color:#e2e8f0;
+      border-radius:12px;
+      box-sizing:border-box;
+      margin-bottom: 30px;
+    }
+
+    .home-grid {
+      display:grid;
+      grid-template-columns:1fr 0.8fr;
+      grid-template-rows:auto auto;
+      gap:18px;
+      align-items:start;
+      width:100%;
+      max-width:100%;
+      box-sizing:border-box;
+    }
+
+    @media (max-width: 800px) {
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* TWO‑COLUMN SECTION (PHOTO + TEXT) */
     .two-column {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      padding: 20px;
+      padding: 20px 10px;
     }
 
     .photo-box {
@@ -117,14 +167,14 @@
       }
     }
 
-    /* FOOTER */
+    /* FOOTER CTA */
     .footer-cta-container {
       background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
       color: #E2E8F0;
       padding: 32px 16px;
       text-align: center;
       border-radius: 10px;
-      margin: 30px auto;
+      margin: 30px auto 0;
       max-width: 900px;
     }
 
@@ -196,22 +246,101 @@
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Experiences ▾</div>
+        <div class="dropdown-content">
+          <a href="#research">Research Student</a>
+          <a href="#work">Work</a>
+          <a href="#teaching">Teaching</a>
+        </div>
+      </div>
+
+      <a href="#internship">Internship</a>
+      <a href="#projects">Project Page</a>
       <a href="#maps">Maps</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Social Media ▾</div>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/oluwasegun-onibudo/" target="_blank">LinkedIn</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- TWO‑COLUMN SECTION -->
-  <div class="two-column">
+  <!-- BLOCK 1: INTRO -->
+  <div id="home">
+    <div class="home-grid">
+
+      <div style="grid-column:1; grid-row:1;">
+        <h1 style="font-size:1.9rem; font-weight:700; margin-bottom:6px; color:white;">
+          Oluwasegun Onibudo
+        </h1>
+
+        <h2 style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
+          GIS Analyst • Cartographer • Remote Sensing Specialist
+        </h2>
+
+        <p style="font-size:0.9rem; line-height:1.45; margin-bottom:12px; color:#cbd5e1;">
+          I am a Geospatial Analyst with over seven years of experience transforming spatial data into actionable insights 
+          for environmental management, groundwater exploration, land administration, and sustainable development.
+        </p>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          My portfolio showcases the projects, research, maps, and professional experiences that define my journey in geospatial science.
+        </p>
+      </div>
+
+      <div style="grid-column:2; grid-row:1; text-align:center;">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Oluwasegun%20-%20Copy1-removebg-preview.jpg?raw=true"
+             alt="Oluwasegun Onibudo"
+             style="width:100%; max-width:260px; border-radius:10px; box-shadow:0 5px 16px rgba(0,0,0,0.45);">
+      </div>
+
+      <div style="grid-column:1; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          What I Do
+        </h3>
+
+        <ul style="list-style:none; padding:0; margin:0; color:#94a3b8; line-height:1.45; font-size:0.9rem;">
+          <li>Spatial Analysis & Modelling</li>
+          <li>Groundwater Potential Mapping</li>
+          <li>Remote Sensing & Image Interpretation</li>
+          <li>Digital Land Administration</li>
+          <li>Geospatial Intelligence</li>
+          <li>Cartography & Map Design</li>
+        </ul>
+      </div>
+
+      <div style="grid-column:2; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          Why I Do It
+        </h3>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          I believe geospatial science is a powerful tool for solving real‑world problems – from water scarcity to land governance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BLOCK 2: TWO‑COLUMN (PHOTO + WRITE‑UP) -->
+  <div id="projects" class="two-column">
 
     <div class="photo-box">
-      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class5.jpg?raw=true">
+      <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/GIS%20Class5.jpg?raw=true"
+           alt="Teaching, workshop, or field session">
     </div>
 
     <div class="text-box">
       <h3 style="margin-bottom:10px;">Project Showcase</h3>
       <p style="color:#94A3B8; line-height:1.45;">
-        Research projects, GIS analysis, fieldwork, and professional contributions.
+        Research projects, GIS analysis, fieldwork, and professional contributions.  
+        This section highlights my practical engagements in geospatial science—from classroom tutorials and workshops
+        to applied projects in environmental management, groundwater exploration, and land administration.
       </p>
     </div>
 
