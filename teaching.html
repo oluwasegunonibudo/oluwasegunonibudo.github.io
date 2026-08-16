@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Teaching - Oluwasegun Onibudo</title>
+  <title>Teaching Gallery - Oluwasegun Onibudo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -53,54 +53,62 @@
       color: #70b3e8;
     }
 
-    .content-box {
+    .year-section {
       background: linear-gradient(135deg,#0f1115,#1b1e24);
       padding: 25px;
       border-radius: 12px;
       margin-top: 30px;
-      max-width: 900px;
+      max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .section-title {
+    .year-title {
       font-size: 1.6rem;
       font-weight: 700;
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    .teach-block {
-      margin-bottom: 28px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .teach-title {
-      font-size: 1.1rem;
-      font-weight: 700;
       color: #70b3e8;
-      margin-bottom: 6px;
+      margin-bottom: 15px;
+      text-align: center;
     }
 
-    .teach-org {
-      font-size: 0.95rem;
-      color: #cbd5e1;
-      margin-bottom: 4px;
+    .gallery-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 10px;
+      text-align: center;
     }
 
-    .teach-date {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin-bottom: 12px;
+    .slider-box {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .teach-block ul {
-      margin: 0;
-      padding-left: 20px;
-      color: #cbd5e1;
-      line-height: 1.55;
-      font-size: 0.95rem;
+    .slider-container {
+      display: flex;
+      animation: slide 25s infinite;
+    }
+
+    .slider-container img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      45% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      70% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      95% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
     }
 
     .footer-cta-container {
@@ -186,97 +194,136 @@
       <a href="work.html">Work</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
+      <a href="teaching-gallery.html">Teaching Gallery</a>
       <a href="internship.html">Internship</a>
     </div>
   </div>
 
-  <!-- TEACHING CONTENT -->
-  <div class="content-box">
+  <!-- YEAR GALLERIES -->
 
-    <h2 class="section-title">Teaching & Training Experience</h2>
+  <!-- 2013 -->
+  <div class="year-section">
+    <div class="year-title">Teaching Gallery — 2013</div>
 
-    <!-- GIS Training Workshops -->
-    <div class="teach-block">
-      <div class="teach-title">GIS & Remote Sensing Training Workshops</div>
-      <div class="teach-org">OYOGIS, KADGIS, NASRDA, Onidex Geo-Spatial Solutions</div>
-      <div class="teach-date">2017 – Present</div>
-
-      <ul>
-        <li>Delivered hands-on GIS and Remote Sensing training to professionals, government staff, and students across Nigeria and China.</li>
-        <li>Taught practical sessions on ArcGIS, QGIS, ILWIS, ERDAS Imagine, ENVI, Google Earth, and Python for geospatial analysis.</li>
-        <li>Designed and facilitated workshops on geospatial intelligence, digital land administration, and spatial data management.</li>
-        <li>Led capacity-building programs focused on parcel digitization, georeferencing, geocoding, and geodatabase management.</li>
-        <li>Provided one-on-one mentorship for interns and junior analysts on geospatial workflows and project execution.</li>
-      </ul>
+    <div class="gallery-title">Teaching Classes</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
     </div>
 
-    <!-- University Teaching -->
-    <div class="teach-block">
-      <div class="teach-title">Academic Teaching & Student Support</div>
-      <div class="teach-org">China University of Mining and Technology (CUMT), Xuzhou, China</div>
-      <div class="teach-date">2019 – 2021</div>
+    <div class="gallery-title">Maps Produced by Participants</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+  </div>
 
-      <ul>
-        <li>Supported MSc students in geospatial analysis, cartography, DEM processing, and remote sensing interpretation.</li>
-        <li>Assisted lecturers in preparing course materials, practical exercises, and GIS laboratory sessions.</li>
-        <li>Guided students through research workflows including data acquisition, preprocessing, spatial modeling, and map production.</li>
-        <li>Provided academic mentorship on thesis writing, scientific visualization, and geospatial methodology.</li>
-      </ul>
+  <!-- 2014 -->
+  <div class="year-section">
+    <div class="year-title">Teaching Gallery — 2014</div>
+
+    <div class="gallery-title">Teaching Classes</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
     </div>
 
-    <!-- Professional Seminars -->
-    <div class="teach-block">
-      <div class="teach-title">Geospatial Intelligence Seminars</div>
-      <div class="teach-org">Government Agencies & Private Organizations</div>
-      <div class="teach-date">2018 – Present</div>
+    <div class="gallery-title">Maps Produced by Participants</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+  </div>
 
-      <ul>
-        <li>Delivered seminars on geospatial intelligence, environmental monitoring, and digital land administration.</li>
-        <li>Presented workflows for modern cadastral systems, parcel automation, QR-code tracking, and digital archiving.</li>
-        <li>Trained teams on integrating GIS into decision-making for land management, planning, and environmental projects.</li>
-      </ul>
+  <!-- 2021 -->
+  <div class="year-section">
+    <div class="year-title">Teaching Gallery — 2021</div>
+
+    <div class="gallery-title">Teaching Classes</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
     </div>
 
+    <div class="gallery-title">Maps Produced by Participants</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2023 -->
+  <div class="year-section">
+    <div class="year-title">Teaching Gallery — 2023</div>
+
+    <div class="gallery-title">Teaching Classes</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+
+    <div class="gallery-title">Maps Produced by Participants</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="year-section">
+    <div class="year-title">Teaching Gallery — 2024</div>
+
+    <div class="gallery-title">Teaching Classes</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
+
+    <div class="gallery-title">Maps Produced by Participants</div>
+    <div class="slider-box">
+      <div class="slider-container">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+        <img src="your-image-url-here">
+      </div>
+    </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer-cta-container">
 
-    <h2 class="cta-heading">Let's Connect for Teaching or Training Engagements</h2>
+    <h2 class="cta-heading">Teaching & Training Gallery</h2>
 
     <p class="cta-subtext">
-      Available for workshops, seminars, academic support, and professional GIS/Remote Sensing training.
+      A visual archive of my teaching journey across Nigeria and China — GIS workshops, seminars, practical classes, and student map productions.
     </p>
-
-    <div class="button-group">
-      <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
-        <i class="fa-solid fa-envelope"></i> Email Me
-      </a>
-
-      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-
-      <a href="https://github.com/oluwasegunonibudo"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-
-      <a href="https://scholar.google.com/citations?user=zxM-wiMAAAAJ&hl=en&oi=ao"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
-      </a>
-
-      <a href="https://www.researchgate.net/profile/Oluwasegun-Onibudo-2?ev=hdr_xprf"
-         target="_blank" rel="noopener noreferrer"
-         class="cta-btn btn-secondary">
-        <i class="fa-solid fa-flask"></i> ResearchGate
-      </a>
-    </div>
 
     <div class="footer-divider"></div>
 
