@@ -1,215 +1,357 @@
-<style>
-/* GLOBAL CONTAINER */
-.master-block {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 25px 15px;
-  background: linear-gradient(135deg,#0f1115,#1b1e24);
-  color: #e2e8f0;
-  font-family: 'Segoe UI', sans-serif;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oluwasegun Onibudo - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* INTRO SECTION */
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 20px;
-  margin-bottom: 35px;
-}
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.intro-grid img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 10px;
-  box-shadow: 0 5px 16px rgba(0,0,0,0.45);
-}
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #05070a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e2e8f0;
+    }
 
-/* SLIDESHOW SECTION */
-.section-wrapper {
-  width: 100%;
-  margin: 0 auto 40px;
-  padding: 10px;
+    /* NAVIGATION BAR */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(135deg, #0f1115, #1b1e24);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 18px;
-  flex-wrap: nowrap;
-}
+    .nav-left {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #70b3e8;
+    }
 
-/* Left & Right Boxes */
-.info-box {
-  flex: 0 0 240px;
-  background: linear-gradient(135deg, #1B1E24, #282C37);
-  padding: 14px;
-  border-radius: 10px;
-  color: #E2E8F0;
-  text-align: center;
-  min-height: 240px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-}
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-/* Center Slideshow Box */
-.slider-box {
-  flex: 0 0 360px;
-  background: linear-gradient(135deg, #0f1115, #1b1e24);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-}
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
 
-/* Slideshow Container */
-.slider-container {
-  width: 100%;
-  height: 240px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
+    .nav-links a:hover {
+      color: #70b3e8;
+    }
 
-.slider-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  animation: fadeSlide 25s infinite;
-  border-radius: 10px;
-}
+    .dropdown {
+      position: relative;
+    }
 
-/* Image timing for 5 images */
-.slider-container img:nth-child(1) { animation-delay: 0s; }
-.slider-container img:nth-child(2) { animation-delay: 5s; }
-.slider-container img:nth-child(3) { animation-delay: 10s; }
-.slider-container img:nth-child(4) { animation-delay: 15s; }
-.slider-container img:nth-child(5) { animation-delay: 20s; }
+    .dropdown-btn {
+      color: #e2e8f0;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
 
-/* Fade animation */
-@keyframes fadeSlide {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #1b1e24;
+      padding: 10px;
+      border-radius: 8px;
+      top: 28px;
+      min-width: 160px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      z-index: 10;
+    }
 
-/* FOOTER CTA */
-.footer-cta-container {
-  background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
-  color: #E2E8F0;
-  padding: 32px 16px;
-  text-align: center;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+    .dropdown-content a {
+      display: block;
+      padding: 6px 0;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
 
-.cta-heading {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+    .dropdown-content a:hover {
+      color: #70b3e8;
+    }
 
-.cta-subtext {
-  font-size: 0.95rem;
-  color: #94A3B8;
-  max-width: 550px;
-  margin: 0 auto 22px;
-  line-height: 1.45;
-}
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 22px;
-}
+    @media (max-width: 800px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
 
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
+    /* SLIDESHOW SECTION */
+    .section-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+    }
 
-.btn-primary {
-  background-color: #70B3E8;
-  color: #12161A;
-}
+    .info-box {
+      flex: 1;
+      background: linear-gradient(135deg, #1B1E24, #282C37);
+      padding: 18px;
+      border-radius: 10px;
+      color: #E2E8F0;
+      text-align: center;
+      min-height: 300px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
 
-.btn-secondary {
-  background-color: rgba(255,255,255,0.05);
-  color: #E2E8F0;
-  border: 1px solid rgba(112,179,232,0.3);
-}
+    .slider-box {
+      flex: 1.2;
+      background: linear-gradient(135deg, #0f1115, #1b1e24);
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
 
-.footer-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.08);
-  max-width: 70%;
-  margin: 0 auto 16px;
-}
+    .slider-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
 
-.footer-bottom {
-  font-size: 0.8rem;
-  color: #64748B;
-}
+    .slider-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      animation: fadeSlide 15s infinite;
+      border-radius: 10px;
+    }
 
-/* MOBILE */
-@media (max-width: 800px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .section-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-</style>
+    .slider-container img:nth-child(1) { animation-delay: 0s; }
+    .slider-container img:nth-child(2) { animation-delay: 5s; }
+    .slider-container img:nth-child(3) { animation-delay: 10s; }
 
+    @keyframes fadeSlide {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
 
-<div class="master-block">
+    @media (max-width: 800px) {
+      .section-wrapper {
+        flex-direction: column;
+      }
+    }
 
-  <!-- INTRO SECTION -->
-  <div class="intro-grid">
-    <div>
-      <h1 style="font-size:1.9rem; font-weight:700; margin-bottom:6px;">Oluwasegun Onibudo</h1>
-      <h2 style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
-        GIS Analyst • Cartographer • Remote Sensing Specialist
-      </h2>
+    /* FOOTER CTA */
+    .footer-cta-container {
+      background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
+      color: #E2E8F0;
+      padding: 32px 16px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 12px auto;
+      max-width: 900px;
+    }
 
-      <p style="font-size:0.9rem; line-height:1.45; margin-bottom:12px;">
-        I am a Geospatial Analyst with over seven years of experience transforming spatial data into actionable insights 
-        for environmental management, groundwater exploration, land administration, and sustainable development.
-      </p>
+    .cta-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-      <p style="font-size:0.9rem; line-height:1.45;">
-        My portfolio showcases the projects, research, maps, and professional experiences that define my journey in geospatial science.
-      </p>
-    </div>
+    .cta-subtext {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      max-width: 550px;
+      margin: 0 auto 22px;
+      line-height: 1.45;
+    }
 
-    <div style="text-align:center;">
-      <img src="YOUR_PROFILE_IMAGE_URL">
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #70B3E8;
+      color: #12161A;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+      border: 1px solid rgba(112, 179, 232, 0.3);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      max-width: 70%;
+      margin: 0 auto 16px;
+    }
+
+    .footer-bottom {
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">Oluwasegun Onibudo</div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Experiences ▾</div>
+        <div class="dropdown-content">
+          <a href="#research">Research Student</a>
+          <a href="#work">Work</a>
+          <a href="#teaching">Teaching</a>
+        </div>
+      </div>
+
+      <a href="#internship">Internship</a>
+      <a href="#projects">Project Page</a>
+      <a href="#maps">Maps</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Social Media ▾</div>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/oluwasegun-onibudo/" target="_blank">LinkedIn</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- BLOCK 1: INTRO -->
+  <div id="home" style="
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:20px 12px;
+    background:linear-gradient(135deg,#0f1115,#1b1e24);
+    color:#e2e8f0;
+    border-radius:12px;
+    box-sizing:border-box;
+  ">
 
-  <!-- SLIDESHOW SECTION -->
-  <div class="section-wrapper">
+    <div style="
+      display:grid;
+      grid-template-columns:1fr 0.8fr;
+      grid-template-rows:auto auto;
+      gap:18px;
+      align-items:start;
+      width:100%;
+      max-width:100%;
+      box-sizing:border-box;
+    ">
+
+      <div style="grid-column:1; grid-row:1;">
+        <h1 style="font-size:1.9rem; font-weight:700; margin-bottom:6px; color:white;">
+          Oluwasegun Onibudo
+        </h1>
+
+        <h2 style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
+          GIS Analyst • Cartographer • Remote Sensing Specialist
+        </h2>
+
+        <p style="font-size:0.9rem; line-height:1.45; margin-bottom:12px; color:#cbd5e1;">
+          I am a Geospatial Analyst with over seven years of experience transforming spatial data into actionable insights 
+          for environmental management, groundwater exploration, land administration, and sustainable development.
+        </p>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          My portfolio showcases the projects, research, maps, and professional experiences that define my journey in geospatial science.
+        </p>
+      </div>
+
+      <div style="grid-column:2; grid-row:1; text-align:center;">
+        <img src="YOUR_PROFILE_IMAGE_URL"
+             alt="Oluwasegun Onibudo"
+             style="width:100%; max-width:260px; border-radius:10px; box-shadow:0 5px 16px rgba(0,0,0,0.45);">
+      </div>
+
+      <div style="grid-column:1; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          What I Do
+        </h3>
+
+        <ul style="list-style:none; padding:0; margin:0; color:#94a3b8; line-height:1.45; font-size:0.9rem;">
+          <li>Spatial Analysis & Modelling</li>
+          <li>Groundwater Potential Mapping</li>
+          <li>Remote Sensing & Image Interpretation</li>
+          <li>Digital Land Administration</li>
+          <li>Geospatial Intelligence</li>
+          <li>Cartography & Map Design</li>
+        </ul>
+      </div>
+
+      <div style="grid-column:2; grid-row:2;">
+        <h3 style="font-size:1.05rem; font-weight:600; margin-bottom:6px; color:white;">
+          Why I Do It
+        </h3>
+
+        <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+          I believe geospatial science is a powerful tool for solving real‑world problems – from water scarcity to land governance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BLOCK 2: SLIDESHOW -->
+  <div id="projects" class="section-wrapper">
 
     <div class="info-box">
-      <h3 style="margin-bottom:6px; font-size:1rem;">Tutorial Representation</h3>
-      <p style="font-size:0.85rem; line-height:1.4; color:#94A3B8;">
+      <h3 style="margin-bottom:8px; font-size:1.1rem;">Tutorial Representation</h3>
+      <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
         Images from my teachings, workshops, and training sessions.
       </p>
     </div>
@@ -219,23 +361,21 @@
         <img src="IMAGE_URL_1">
         <img src="IMAGE_URL_2">
         <img src="IMAGE_URL_3">
-        <img src="IMAGE="IMAGE_URL_4">
-        <img src="IMAGE_URL_5">
       </div>
     </div>
 
     <div class="info-box">
-      <h3 style="margin-bottom:6px; font-size:1rem;">Project Showcase</h3>
-      <p style="font-size:0.85rem; line-height:1.4; color:#94A3B8;">
+      <h3 style="margin-bottom:8px; font-size:1.1rem;">Project Showcase</h3>
+      <p style="font-size:0.9rem; line-height:1.45; color:#94A3B8;">
         Research projects, GIS analysis, fieldwork, and professional contributions.
       </p>
     </div>
 
   </div>
 
-
-  <!-- FOOTER CTA -->
+  <!-- BLOCK 3: FOOTER CTA -->
   <footer class="footer-cta-container">
+
     <h2 class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
 
     <p class="cta-subtext">
@@ -244,15 +384,19 @@
 
     <div class="button-group">
       <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
-        Email Me
+        <i class="fa-solid fa-envelope"></i> Email Me
       </a>
 
-      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/" target="_blank" class="cta-btn btn-secondary">
-        LinkedIn
+      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
       </a>
 
-      <a href="https://github.com/yourusername" target="_blank" class="cta-btn btn-secondary">
-        GitHub
+      <a href="https://github.com/oluwasegunonibudo"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-github"></i> GitHub
       </a>
     </div>
 
@@ -261,6 +405,8 @@
     <div class="footer-bottom">
       © 2026 Oluwasegun Onibudo. All rights reserved.
     </div>
+
   </footer>
 
-</div>
+</body>
+</html>
