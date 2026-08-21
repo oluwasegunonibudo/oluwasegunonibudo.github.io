@@ -84,11 +84,61 @@
       color: #12161A;
     }
 
+    /* FOOTER CTA */
+    .footer-cta-container {
+      background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
+      color: #E2E8F0;
+      padding: 32px 16px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 40px auto 0;
+      max-width: 900px;
+    }
+
+    .cta-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cta-subtext {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      max-width: 550px;
+      margin: 0 auto 22px;
+      line-height: 1.45;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .btn-primary {
+      background-color: #70B3E8;
+      color: #12161A;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+      border: 1px solid rgba(112, 179, 232, 0.3);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      max-width: 70%;
+      margin: 0 auto 16px;
+    }
+
     .footer-bottom {
       font-size: 0.8rem;
       color: #64748B;
       text-align: center;
-      margin-top: 40px;
     }
   </style>
 </head>
@@ -105,7 +155,6 @@
       <a href="work.html">Work</a>
       <a href="research.html">Research & Publications</a>
       <a href="teaching.html">Teaching</a>
-      <a href="teaching-gallery.html">Teaching Gallery</a>
       <a href="internship.html">Internship</a>
       <a href="projects.html">Project Page</a>
       <a href="maps.html">Maps</a>
@@ -143,9 +192,59 @@
 
   </div>
 
-  <div class="footer-bottom">
-    © 2026 Oluwasegun Onibudo. All rights reserved.
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer-cta-container">
+
+    <h2 class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
+
+    <p class="cta-subtext">
+      Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.
+    </p>
+
+    <div class="button-group">
+
+      <!-- Email -->
+      <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
+        <i class="fa-solid fa-envelope"></i> Email Me
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/oluwasegunonibudo"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=zxM-wiMAAAAJ&hl=en&oi=ao"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+      </a>
+
+      <!-- ResearchGate -->
+      <a href="https://www.researchgate.net/profile/Oluwasegun-Onibudo-2?ev=hdr_xprf"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-solid fa-flask"></i> ResearchGate
+      </a>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      © 2026 Oluwasegun Onibudo. All rights reserved.
+    </div>
+
+  </footer>
 
 </body>
 </html>
