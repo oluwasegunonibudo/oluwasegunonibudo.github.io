@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects & Maps - Oluwasegun Onibudo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #05070a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e2e8f0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(135deg, #0f1115, #1b1e24);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .nav-left {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #70b3e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #70b3e8;
+    }
+
+    /* CONTENT BOX */
+    .content-box {
+      background: linear-gradient(135deg,#0f1115,#1b1e24);
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .section-subtext {
+      color: #cbd5e1;
+      line-height: 1.55;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    /* PROJECT LIST */
+    .project-block {
+      margin-bottom: 25px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #70b3e8;
+      margin-bottom: 6px;
+    }
+
+    /* MAP GRID */
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .map-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #0f1115;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 900px) {
+      .map-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .map-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* FOOTER CTA */
+    .footer-cta-container {
+      background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
+      color: #E2E8F0;
+      padding: 32px 16px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 30px auto 0;
+      max-width: 900px;
+    }
+
+    .cta-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cta-subtext {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      max-width: 550px;
+      margin: 0 auto 22px;
+      line-height: 1.45;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #70B3E8;
+      color: #12161A;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+      border: 1px solid rgba(112, 179, 232, 0.3);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      max-width: 70%;
+      margin: 0 auto 16px;
+    }
+
+    .footer-bottom {
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">Oluwasegun Onibudo</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="work.html">Work</a>
+      <a href="research.html">Research & Publications</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="internship.html">Internship</a>
+      <a href="projects-maps.html">Projects & Maps</a>
+      <a href="socialmedia.html">Social Media</a>
+    </div>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <div class="content-box">
+
+    <h2 class="section-title">Projects</h2>
+
+    <p class="section-subtext">
+      A collection of applied geospatial projects involving GIS analysis, remote sensing, cartography, spatial modelling,
+      environmental monitoring, land administration, and geospatial intelligence.
+    </p>
+
+    <div class="project-block">
+      <div class="project-title">Groundwater Lineament Mapping</div>
+      <p class="section-subtext">
+        Using GIS and Remote Sensing to map structural lineaments for groundwater resource assessment.
+      </p>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">Malaria Incidence Mapping</div>
+      <p class="section-subtext">
+        Spatial analysis of malaria cases across Akure using hospital‑based health data and geospatial modelling.
+      </p>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">Accident Mapping & Emergency Response Routing</div>
+      <p class="section-subtext">
+        Identifying optimal routes to nearest hospitals based on road networks, travel time, and accessibility.
+      </p>
+    </div>
+
+    <div class="project-block">
+      <div class="project-title">Crime Mapping of Abuja Three‑Arm Zone</div>
+      <p class="section-subtext">
+        Integrating field observations, questionnaires, and GIS analysis to map crime patterns for security planning.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MAPS SECTION -->
+  <div class="content-box">
+
+    <h2 class="section-title">Maps</h2>
+
+    <p class="section-subtext">
+      A curated gallery of thematic maps produced using GIS and Remote Sensing tools. These maps highlight spatial patterns,
+      environmental conditions, land‑use dynamics, and geospatial intelligence insights.
+    </p>
+
+    <!-- MAP GRID (3×4) -->
+    <div class="map-grid">
+      <img src="map1.jpg">
+      <img src="map2.jpg">
+      <img src="map3.jpg">
+      <img src="map4.jpg">
+      <img src="map5.jpg">
+      <img src="map6.jpg">
+      <img src="map7.jpg">
+      <img src="map8.jpg">
+      <img src="map9.jpg">
+      <img src="map10.jpg">
+      <img src="map11.jpg">
+      <img src="map12.jpg">
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-cta-container">
+
+    <h2 class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
+
+    <p class="cta-subtext">
+      Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.
+    </p>
+
+    <div class="button-group">
+      <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
+        <i class="fa-solid fa-envelope"></i> Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
+         target="_blank" class="cta-btn btn-secondary">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="https://github.com/oluwasegunonibudo"
+         target="_blank" class="cta-btn btn-secondary">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=zxM-wiMAAAAJ&hl=en&oi=ao"
+         target="_blank" class="cta-btn btn-secondary">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+      </a>
+
+      <a href="https://www.researchgate.net/profile/Oluwasegun-Onibudo-2?ev=hdr_xprf"
+         target="_blank" class="cta-btn btn-secondary">
+        <i class="fa-solid fa-flask"></i> ResearchGate
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      © 2026 Oluwasegun Onibudo. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
