@@ -102,15 +102,6 @@
       margin-top: 20px;
     }
 
-    .map-grid img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      background: #0f1115;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
     @media (max-width: 900px) {
       .map-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -121,6 +112,72 @@
       .map-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* MAP BOX SLIDER */
+    .map-box {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background: #0f1115;
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+    }
+
+    .map-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      animation: advancedSlide 14s infinite;
+    }
+
+    .map-box img:nth-child(1) { animation-delay: 0s; }
+    .map-box img:nth-child(2) { animation-delay: 2s; }
+    .map-box img:nth-child(3) { animation-delay: 4s; }
+    .map-box img:nth-child(4) { animation-delay: 6s; }
+    .map-box img:nth-child(5) { animation-delay: 8s; }
+    .map-box img:nth-child(6) { animation-delay: 10s; }
+    .map-box img:nth-child(7) { animation-delay: 12s; }
+
+    @keyframes advancedSlide {
+      0% { opacity: 0; transform: scale(1.05); }
+      10% { opacity: 1; transform: scale(1); }
+      30% { opacity: 1; transform: scale(1.05); }
+      40% { opacity: 0; transform: scale(1.1); }
+      100% { opacity: 0; }
+    }
+
+    /* MODAL VIEWER */
+    #mapModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #mapModal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    #mapModalClose {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
     }
 
     /* FOOTER CTA */
@@ -250,13 +307,13 @@
     </div>
 
     <div class="project-block">
-  <div class="project-title">Facility Monitoring in Abuja, Nigeria</div>
-  <p class="section-subtext">
-    Monitoring and mapping critical facilities across the Abuja metropolis using GPS field data, satellite imagery,
-    and GIS workflows. The project involved field verification, spatial data collection, and geospatial analysis to
-    support infrastructure management, security planning, and urban development.
-  </p>
-</div>
+      <div class="project-title">Facility Monitoring in Abuja, Nigeria</div>
+      <p class="section-subtext">
+        Monitoring and mapping critical facilities across the Abuja metropolis using GPS field data, satellite imagery,
+        and GIS workflows. The project involved field verification, spatial data collection, and geospatial analysis to
+        support infrastructure management, security planning, and urban development.
+      </p>
+    </div>
 
   </div>
 
@@ -271,58 +328,65 @@
     </p>
 
     <!-- MAP GRID (4 × 2) -->
-<div class="map-grid">
+    <div class="map-grid">
 
-  <!-- MAP 1 -->
-  <div class="map-box" onclick="openMapModal('https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic%20Map.jpg?raw=true')">
+      <!-- MAP 1 -->
+      <div class="map-box" onclick="openMapModal('https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic%20Map.jpg?raw=true')">
 
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic%20Map.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic_TMI%20overlay.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geology_Stream%20networks.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Lineament%20Density.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_TMI_streamnetworks.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Stream%20density.jpg?raw=true">
-    <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Stream%20density%20over%20Geology.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic%20Map.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geologic_TMI%20overlay.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Geology_Stream%20networks.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Lineament%20Density.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_TMI_streamnetworks.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Stream%20density.jpg?raw=true">
+        <img src="https://github.com/oluwasegunonibudo/oluwasegunonibudo.github.io/blob/main/Map-box1_Stream%20density%20over%20Geology.jpg?raw=true">
+
+      </div>
+
+      <!-- MAP 2 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 3 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 4 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 5 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 6 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 7 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+      <!-- MAP 8 -->
+      <div class="map-box">
+        ... images ...
+      </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="mapModal" onclick="closeMapModal()">
+      <span id="mapModalClose">&times;</span>
+      <img id="mapModalImg" src="">
+    </div>
 
   </div>
-
-  <!-- MAP 2 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 3 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 4 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 5 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 6 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 7 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-  <!-- MAP 8 -->
-  <div class="map-box">
-    ... images ...
-  </div>
-
-</div>
-
 
   <!-- FOOTER -->
   <footer class="footer-cta-container">
@@ -366,6 +430,18 @@
     </div>
 
   </footer>
+
+  <!-- MODAL JS -->
+  <script>
+    function openMapModal(src) {
+      document.getElementById("mapModalImg").src = src;
+      document.getElementById("mapModal").style.display = "flex";
+    }
+
+    function closeMapModal() {
+      document.getElementById("mapModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
