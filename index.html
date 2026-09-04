@@ -54,45 +54,6 @@
       color: #70b3e8;
     }
 
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-btn {
-      color: #e2e8f0;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: #1b1e24;
-      padding: 10px;
-      border-radius: 8px;
-      top: 28px;
-      min-width: 160px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-      z-index: 10;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 6px 0;
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .dropdown-content a:hover {
-      color: #70b3e8;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
     /* INTRO SECTION */
     #home {
       width:100%;
@@ -163,39 +124,6 @@
       opacity: 0;
       animation: advancedSlide 68s infinite;
       border-radius: 10px;
-    }
-
-    /* 17 images → each image gets its own delay */
-    .slider-container img:nth-child(1) { animation-delay: 0s; }
-    .slider-container img:nth-child(2) { animation-delay: 4s; }
-    .slider-container img:nth-child(3) { animation-delay: 8s; }
-    .slider-container img:nth-child(4) { animation-delay: 12s; }
-    .slider-container img:nth-child(5) { animation-delay: 16s; }
-    .slider-container img:nth-child(6) { animation-delay: 20s; }
-    .slider-container img:nth-child(7) { animation-delay: 24s; }
-    .slider-container img:nth-child(8) { animation-delay: 28s; }
-    .slider-container img:nth-child(9) { animation-delay: 32s; }
-    .slider-container img:nth-child(10) { animation-delay: 36s; }
-    .slider-container img:nth-child(11) { animation-delay: 40s; }
-    .slider-container img:nth-child(12) { animation-delay: 44s; }
-    .slider-container img:nth-child(13) { animation-delay: 48s; }
-    .slider-container img:nth-child(14) { animation-delay: 52s; }
-    .slider-container img:nth-child(15) { animation-delay: 56s; }
-    .slider-container img:nth-child(16) { animation-delay: 60s; }
-    .slider-container img:nth-child(17) { animation-delay: 64s; }
-
-    @keyframes advancedSlide {
-      0% { opacity: 0; transform: scale(1.05) translateX(20px); }
-      10% { opacity: 1; transform: scale(1) translateX(0); }
-      30% { opacity: 1; transform: scale(1.05) translateX(-20px); }
-      40% { opacity: 0; transform: scale(1.1) translateX(-40px); }
-      100% { opacity: 0; }
-    }
-
-    @media (max-width: 800px) {
-      .slideshow-section {
-        grid-template-columns: 1fr;
-      }
     }
 
     /* FOOTER CTA */
@@ -394,4 +322,50 @@
     <h2 id="footer-heading" class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
 
     <p id="footer-subtext" class="cta-subtext">
-      Open
+      Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.
+    </p>
+
+    <div class="button-group">
+
+      <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
+        <i class="fa-solid fa-envelope"></i> Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="https://github.com/oluwasegunonibudo"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=zxM-wiMAAAAJ&hl=en&oi=ao"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+      </a>
+
+      <a href="https://www.researchgate.net/profile/Oluwasegun-Onibudo-2?ev=hdr_xprf"
+         target="_blank" rel="noopener noreferrer"
+         class="cta-btn btn-secondary">
+        <i class="fa-solid fa-flask"></i> ResearchGate
+      </a>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      © 2026 Oluwasegun Onibudo. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script src="lang.js"></script>
+
+</body>
+</html>
