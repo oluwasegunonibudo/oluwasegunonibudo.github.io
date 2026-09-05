@@ -16,7 +16,6 @@
       color: #e2e8f0;
     }
 
-    /* NAVIGATION BAR */
     .navbar {
       width: 100%;
       background: linear-gradient(135deg, #0f1115, #1b1e24);
@@ -93,7 +92,6 @@
       display: block;
     }
 
-    /* INTRO SECTION */
     #home {
       width:100%;
       max-width:100%;
@@ -123,7 +121,6 @@
       }
     }
 
-    /* SLIDESHOW SECTION */
     .slideshow-section {
       max-width: 1100px;
       margin: 0 auto;
@@ -165,40 +162,6 @@
       border-radius: 10px;
     }
 
-    /* 17 images → each image gets its own delay */
-    .slider-container img:nth-child(1) { animation-delay: 0s; }
-    .slider-container img:nth-child(2) { animation-delay: 4s; }
-    .slider-container img:nth-child(3) { animation-delay: 8s; }
-    .slider-container img:nth-child(4) { animation-delay: 12s; }
-    .slider-container img:nth-child(5) { animation-delay: 16s; }
-    .slider-container img:nth-child(6) { animation-delay: 20s; }
-    .slider-container img:nth-child(7) { animation-delay: 24s; }
-    .slider-container img:nth-child(8) { animation-delay: 28s; }
-    .slider-container img:nth-child(9) { animation-delay: 32s; }
-    .slider-container img:nth-child(10) { animation-delay: 36s; }
-    .slider-container img:nth-child(11) { animation-delay: 40s; }
-    .slider-container img:nth-child(12) { animation-delay: 44s; }
-    .slider-container img:nth-child(13) { animation-delay: 48s; }
-    .slider-container img:nth-child(14) { animation-delay: 52s; }
-    .slider-container img:nth-child(15) { animation-delay: 56s; }
-    .slider-container img:nth-child(16) { animation-delay: 60s; }
-    .slider-container img:nth-child(17) { animation-delay: 64s; }
-
-    @keyframes advancedSlide {
-      0% { opacity: 0; transform: scale(1.05) translateX(20px); }
-      10% { opacity: 1; transform: scale(1) translateX(0); }
-      30% { opacity: 1; transform: scale(1.05) translateX(-20px); }
-      40% { opacity: 0; transform: scale(1.1) translateX(-40px); }
-      100% { opacity: 0; }
-    }
-
-    @media (max-width: 800px) {
-      .slideshow-section {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* FOOTER CTA */
     .footer-cta-container {
       background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
       color: #E2E8F0;
@@ -275,13 +238,12 @@
       font-size: 0.85rem;
       cursor: pointer;
       transition: 0.25s ease;
-}
+    }
 
-.lang-btn:hover {
-  background: #8cc7ff;
-}
+    .lang-btn:hover {
+      background: #8cc7ff;
+    }
 
-    
   </style>
 </head>
 
@@ -289,52 +251,50 @@
 
   <!-- NAVBAR -->
   <div class="navbar">
-    <div class="nav-left">Oluwasegun Onibudo</div>
+    <div class="nav-left" id="nav-name">Oluwasegun Onibudo</div>
 
     <div class="nav-links">
+      <a href="index.html" id="nav-home">Home</a>
+      <a href="about.html" id="nav-about">About Me</a>
+      <a href="work.html" id="nav-work">Work</a>
+      <a href="research.html" id="nav-research">Research & Publications</a>
+      <a href="workshops.html" id="nav-workshops">Workshops</a>
+      <a href="internship.html" id="nav-internship">Internship</a>
+      <a href="projects-maps.html" id="nav-projects">Projects & Maps</a>
+      <a href="socialmedia.html" id="nav-social">Social Media</a>
 
-      <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="work.html">Work</a>
-    <a href="research.html">Research & Publications</a>
-    <a href="workshops.html">Workshops</a>
-    <a href="internship.html">Internship</a>
-    <a href="projects-maps.html">Projects & Maps</a>
-    <a href="socialmedia.html">Social Media</a>
-    <!-- ⭐ ADD THIS BUTTON HERE ⭐ -->
-    <button id="lang-switch" class="lang-btn">EN | DE</button>
-
+      <button id="lang-switch" class="lang-btn">EN | DE</button>
     </div>
-</div>
+  </div>
 
   <!-- INTRO SECTION -->
 <div id="home">
   <div class="home-grid">
 
     <div>
-      <h1 style="font-size:1.9rem; font-weight:700; margin-bottom:6px; color:white;">
+      <h1 id="home-name" style="font-size:1.9rem; font-weight:700; margin-bottom:6px; color:white;">
         Oluwasegun Onibudo
       </h1>
 
-      <h2 style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
+      <h2 id="home-title" style="font-size:0.95rem; font-weight:500; margin-bottom:14px; color:#70b3e8;">
         Geospatial Analyst • Applied Geologist • Cartographer • Remote Sensing Specialist
       </h2>
 
-      <p style="font-size:0.9rem; line-height:1.45; margin-bottom:12px; color:#cbd5e1;">
+      <p id="home-p1" style="font-size:0.9rem; line-height:1.45; margin-bottom:12px; color:#cbd5e1;">
         I am a Geospatial Analyst and Applied Geologist with over seven years of experience integrating GIS, remote sensing, 
         and geological science to support environmental management, groundwater exploration, land administration, and sustainable development. 
         My academic foundation in <strong>Applied Geology (B.Tech, FUTA)</strong> and <strong>Cartography & GIS (MSc, China University of Mining and Technology)</strong> 
         enables me to bridge geospatial technology with earth science for high‑impact spatial decision‑making.
       </p>
 
-      <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+      <p id="home-p2" style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
         I have contributed to major GIS and land administration projects at OYOGIS, KADGIS, and NASRDA, conducted award‑winning research on groundwater 
         prediction and lineament mapping, and published multiple peer‑reviewed studies on geospatial modelling, DEM‑derived lineament extraction, 
         and environmental analysis. My work spans spatial analysis, geospatial intelligence, digital land administration, wetland mapping, 
         and land‑use/land‑cover change detection.
       </p>
 
-      <p style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
+      <p id="home-p3" style="font-size:0.9rem; line-height:1.45; color:#cbd5e1;">
         I also train professionals, students, and government staff in GIS and remote sensing, leading geospatial intelligence seminars and capacity‑building 
         programs across Nigeria and China. This portfolio showcases my research, projects, maps, teaching engagements, and professional contributions-reflecting 
         my commitment to advancing geospatial science for sustainable development and informed decision‑making.
@@ -354,15 +314,15 @@
   <div id="projects" class="slideshow-section">
 
     <div class="slideshow-text">
-  <h3 style="margin-bottom:10px;">Professional Activities & Project Showcase</h3>
-  <p style="color:#94A3B8; line-height:1.45;">
-    Images from my professional engagements, including GIS analysis, fieldwork, training sessions, workshops, 
-    conference presentations, and project contributions across OYOGIS, KADGIS, NASRDA, Onidex Geo‑Spatial Solutions Akure, 
-    and the China University of Mining and Technology (CUMT). This showcase highlights my practical involvement in geospatial 
-    science-from capacity‑building programs and geospatial intelligence seminars to applied projects in environmental management, 
-    groundwater exploration, digital land administration, and land‑use/land‑cover analysis.
-  </p>
-</div>
+      <h3 id="home-project-title" style="margin-bottom:10px;">Professional Activities & Project Showcase</h3>
+      <p id="home-project-text" style="color:#94A3B8; line-height:1.45;">
+        Images from my professional engagements, including GIS analysis, fieldwork, training sessions, workshops, 
+        conference presentations, and project contributions across OYOGIS, KADGIS, NASRDA, Onidex Geo‑Spatial Solutions Akure, 
+        and the China University of Mining and Technology (CUMT). This showcase highlights my practical involvement in geospatial 
+        science-from capacity‑building programs and geospatial intelligence seminars to applied projects in environmental management, 
+        groundwater exploration, digital land administration, and land‑use/land‑cover analysis.
+      </p>
+    </div>
 
     <div class="slider-box">
       <div class="slider-container">
@@ -393,41 +353,36 @@
   <!-- FOOTER -->
 <footer class="footer-cta-container">
 
-  <h2 class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
+  <h2 id="footer-heading" class="cta-heading">Let's Connect for Research or Professional Opportunities</h2>
 
-  <p class="cta-subtext">
+  <p id="footer-subtext" class="cta-subtext">
     Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.
   </p>
 
   <div class="button-group">
 
-    <!-- Email -->
     <a href="mailto:segunonibudo@yahoo.com" class="cta-btn btn-primary">
       <i class="fa-solid fa-envelope"></i> Email Me
     </a>
 
-    <!-- LinkedIn -->
     <a href="https://www.linkedin.com/in/oluwasegun-onibudo/"
        target="_blank" rel="noopener noreferrer"
        class="cta-btn btn-secondary">
       <i class="fa-brands fa-linkedin"></i> LinkedIn
     </a>
 
-    <!-- GitHub -->
     <a href="https://github.com/oluwasegunonibudo"
        target="_blank" rel="noopener noreferrer"
        class="cta-btn btn-secondary">
       <i class="fa-brands fa-github"></i> GitHub
     </a>
 
-    <!-- Google Scholar -->
     <a href="https://scholar.google.com/citations?user=zxM-wiMAAAAJ&hl=en&oi=ao"
        target="_blank" rel="noopener noreferrer"
        class="cta-btn btn-secondary">
       <i class="fa-solid fa-graduation-cap"></i> Google Scholar
     </a>
 
-    <!-- ResearchGate -->
     <a href="https://www.researchgate.net/profile/Oluwasegun-Onibudo-2?ev=hdr_xprf"
        target="_blank" rel="noopener noreferrer"
        class="cta-btn btn-secondary">
