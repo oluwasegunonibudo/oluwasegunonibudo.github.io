@@ -44,31 +44,47 @@ const translations = {
   }
 };
 
-let currentLang = "en";
+// Load saved language or default to English
+let currentLang = localStorage.getItem("siteLanguage") || "en";
 
+// Handle language switch button
 document.getElementById("lang-switch").addEventListener("click", () => {
   currentLang = currentLang === "en" ? "de" : "en";
+  localStorage.setItem("siteLanguage", currentLang);
   applyTranslations();
 });
 
+// Apply translations to all elements with IDs
 function applyTranslations() {
-  document.getElementById("nav-home").innerText = translations[currentLang].navHome;
-  document.getElementById("nav-about").innerText = translations[currentLang].navAbout;
-  document.getElementById("nav-work").innerText = translations[currentLang].navWork;
-  document.getElementById("nav-research").innerText = translations[currentLang].navResearch;
-  document.getElementById("nav-workshops").innerText = translations[currentLang].navWorkshops;
-  document.getElementById("nav-internship").innerText = translations[currentLang].navInternship;
-  document.getElementById("nav-projects").innerText = translations[currentLang].navProjects;
-  document.getElementById("nav-social").innerText = translations[currentLang].navSocial;
+  if (!translations[currentLang]) return;
 
-  document.getElementById("home-title").innerText = translations[currentLang].homeTitle;
-  document.getElementById("home-p1").innerText = translations[currentLang].homeP1;
-  document.getElementById("home-p2").innerText = translations[currentLang].homeP2;
-  document.getElementById("home-p3").innerText = translations[currentLang].homeP3;
+  const map = {
+    "nav-home": "navHome",
+    "nav-about": "navAbout",
+    "nav-work": "navWork",
+    "nav-research": "navResearch",
+    "nav-workshops": "navWorkshops",
+    "nav-internship": "navInternship",
+    "nav-projects": "navProjects",
+    "nav-social": "navSocial",
 
-  document.getElementById("home-project-title").innerText = translations[currentLang].homeProjectTitle;
-  document.getElementById("home-project-text").innerText = translations[currentLang].homeProjectText;
+    "home-title": "homeTitle",
+    "home-p1": "homeP1",
+    "home-p2": "homeP2",
+    "home-p3": "homeP3",
 
-  document.getElementById("footer-heading").innerText = translations[currentLang].footerHeading;
-  document.getElementById("footer-subtext").innerText = translations[currentLang].footerSubtext;
+    "home-project-title": "homeProjectTitle",
+    "home-project-text": "homeProjectText",
+
+    "footer-heading": "footerHeading",
+    "footer-subtext": "footerSubtext"
+  };
+
+  for (const id in map) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = translations[currentLang][map[id]];
+  }
 }
+
+// Apply language immediately on page load
+applyTranslations();
