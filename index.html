@@ -123,6 +123,14 @@
       border-radius: 10px;
     }
 
+    @keyframes advancedSlide {
+      0% { opacity: 0; transform: scale(1.05) translateX(20px); }
+      10% { opacity: 1; transform: scale(1) translateX(0); }
+      30% { opacity: 1; transform: scale(1.05) translateX(-20px); }
+      40% { opacity: 0; transform: scale(1.1) translateX(-40px); }
+      100% { opacity: 0; }
+    }
+
     .footer-cta-container {
       background: linear-gradient(135deg, #1B1E24 0%, #282C37 100%);
       color: #E2E8F0;
@@ -360,7 +368,8 @@
 
 </footer>
   
-<script src="lang.js"></script>
+<!-- CACHE-BUSTING -->
+<script src="lang.js?v=1"></script>
 
 </body>
 </html>
