@@ -9,25 +9,19 @@ const translations = {
     navProjects: "Projects & Maps",
     navSocial: "Social Media",
 
-    homeTitle: "Geospatial Analyst • Applied Geologist • Cartographer • Remote Sensing Specialist",
-    homeP1: "I am a Geospatial Analyst and Applied Geologist with over seven years of experience integrating GIS, remote sensing, and geological science to support environmental management, groundwater exploration, land administration, and sustainable development.",
-    homeP2: "I have contributed to major GIS and land administration projects at OYOGIS, KADGIS, and NASRDA, conducted award‑winning research on groundwater prediction and lineament mapping, and published multiple peer‑reviewed studies on geospatial modelling, DEM‑derived lineament extraction, and environmental analysis.",
-    homeP3: "I also train professionals, students, and government staff in GIS and remote sensing, leading geospatial intelligence seminars and capacity‑building programs across Nigeria and China. This portfolio showcases my research, projects, maps, teaching engagements, and professional contributions—reflecting my commitment to advancing geospatial science for sustainable development and informed decision‑making.",
-    homeProjectTitle: "Professional Activities & Project Showcase",
-    homeProjectText: "Images from my professional engagements, including GIS analysis, fieldwork, training sessions, workshops, conference presentations, and project contributions across OYOGIS, KADGIS, NASRDA, Onidex Geo‑Spatial Solutions Akure, and the China University of Mining and Technology (CUMT).",
-
     footerHeading: "Let's Connect for Research or Professional Opportunities",
     footerSubtext: "Open to collaborations, geospatial data analysis projects, or full-time roles in GIS and Remote Sensing.",
 
+    // ABOUT PAGE
     aboutHeading: "About Me",
-    aboutP1: "I am Oluwasegun Onibudo, a Geospatial Analyst and Applied Geologist with a strong multidisciplinary background in GIS, remote sensing, cartography, and earth science.",
-    aboutP2: "With over seven years of hands‑on experience, I have contributed to major geospatial and land‑administration projects across Nigeria and China.",
-    aboutP3: "I am also a published researcher with multiple peer‑reviewed journal articles and international conference presentations.",
-    aboutP4: "Beyond research and project execution, I am deeply committed to capacity building through seminars, workshops, and professional development programs.",
-    aboutP5: "This portfolio reflects my journey across geology, geospatial science, research, teaching, and professional practice.",
+    aboutP1: "I am Oluwasegun Onibudo, a Geospatial Analyst and Applied Geologist with a strong multidisciplinary background in GIS, remote sensing, cartography, and earth science. My academic foundation includes a B.Tech in Applied Geology (FUTA, Nigeria) and an MSc in Cartography & GIS (China University of Mining and Technology, CUMT), where I conducted advanced research in groundwater prediction, DEM‑derived lineament extraction, and geospatial modelling.",
+    aboutP2: "With over seven years of hands‑on experience, I have contributed to major geospatial and land‑administration projects across Nigeria and China, including OYOGIS, KADGIS, NASRDA, and Onidex Geo‑Spatial Solutions. My work spans groundwater exploration, environmental monitoring, wetland mapping, spatial modelling, land‑use/land‑cover change detection, and digital land administration. I am proficient in industry‑standard tools such as ArcGIS, QGIS, ERDAS Imagine, ILWIS, ENVI, PCI Geomatica, Rockworks, Google Earth, and Python.",
+    aboutP3: "I am also a published researcher with multiple peer‑reviewed journal articles and international conference presentations. My research contributions include groundwater targeting using satellite imagery, automatic lineament extraction, shaded relief analysis, and deep learning applications in geoscience. I have received notable recognitions, including the Best Student Paper Award at the XVIII International Congress for Mine Surveying (Xuzhou, China).",
+    aboutP4: "Beyond research and project execution, I am deeply committed to capacity building. I have led geospatial intelligence seminars, GIS training workshops, and professional development programs for students, government agencies, and industry professionals—helping strengthen geospatial literacy and digital land‑administration practices across Nigeria and China.",
+    aboutP5: "This portfolio reflects my journey across geology, geospatial science, research, teaching, and professional practice—showcasing the maps, projects, publications, and engagements that define my commitment to using geospatial technology for sustainable development and informed decision‑making.",
 
     skillsHeading: "Technical Skills & Competencies",
-    skillsSubtext: "A comprehensive blend of geospatial, analytical, and technical skills developed through hands‑on fieldwork, academic research, and applied GIS/Remote Sensing projects.",
+    skillsSubtext: "A comprehensive blend of geospatial, analytical, and technical skills developed through hands‑on fieldwork, academic research, professional training, and applied GIS/Remote Sensing projects.",
 
     skill1: "GIS Software: ArcGIS Pro, ArcGIS Server, ArcMap, QGIS, ILWIS, PCI Geomatica, RockWorks",
     skill2: "Remote Sensing Tools: ERDAS Imagine, ENVI, Google Earth",
@@ -47,32 +41,26 @@ const translations = {
     navProjects: "Projekte & Karten",
     navSocial: "Soziale Medien",
 
-    homeTitle: "Geodatenanalyst • Angewandter Geologe • Kartograph • Fernerkundungsspezialist",
-    homeP1: "Ich bin ein Geodatenanalyst und angewandter Geologe mit über sieben Jahren Erfahrung in der Integration von GIS, Fernerkundung und Geowissenschaften.",
-    homeP2: "Ich habe zu wichtigen GIS- und Landverwaltungsprojekten beigetragen und preisgekrönte Forschung durchgeführt.",
-    homeP3: "Ich schule Fachkräfte, Studierende und Behördenmitarbeiter in GIS und Fernerkundung.",
-    homeProjectTitle: "Berufliche Aktivitäten & Projektübersicht",
-    homeProjectText: "Bilder aus meinen beruflichen Tätigkeiten, einschließlich GIS-Analyse, Feldarbeit, Schulungen, Workshops und Konferenzpräsentationen.",
-
     footerHeading: "Kontakt für Forschungs- oder berufliche Möglichkeiten",
     footerSubtext: "Offen für Zusammenarbeit, GIS-Datenanalyseprojekte oder Vollzeitstellen im Bereich GIS und Fernerkundung.",
 
+    // ABOUT PAGE (FULL TRANSLATION)
     aboutHeading: "Über mich",
-    aboutP1: "Ich bin Oluwasegun Onibudo, ein Geodatenanalyst und angewandter Geologe mit starkem multidisziplinärem Hintergrund.",
-    aboutP2: "Mit über sieben Jahren praktischer Erfahrung habe ich zu wichtigen geospatialen Projekten in Nigeria und China beigetragen.",
-    aboutP3: "Ich bin ein veröffentlichter Forscher mit mehreren begutachteten Artikeln und internationalen Konferenzbeiträgen.",
-    aboutP4: "Neben Forschung und Projekten engagiere ich mich stark für die Weiterbildung durch Seminare und Workshops.",
-    aboutP5: "Dieses Portfolio zeigt meinen Weg durch Geologie, Geodatenwissenschaft, Forschung und berufliche Praxis.",
+    aboutP1: "Ich bin Oluwasegun Onibudo, ein Geodatenanalyst und angewandter Geologe mit starkem multidisziplinärem Hintergrund in GIS, Fernerkundung, Kartographie und Geowissenschaften. Meine akademische Grundlage umfasst einen B.Tech in Angewandter Geologie (FUTA, Nigeria) und einen MSc in Kartographie & GIS (China University of Mining and Technology, CUMT), wo ich fortgeschrittene Forschung zur Grundwasserprognose, DEM‑basierten Lineamentextraktion und geospatialem Modellieren durchgeführt habe.",
+    aboutP2: "Mit über sieben Jahren praktischer Erfahrung habe ich zu wichtigen geospatialen und landverwaltungsbezogenen Projekten in Nigeria und China beigetragen, darunter OYOGIS, KADGIS, NASRDA und Onidex Geo‑Spatial Solutions. Meine Arbeit umfasst Grundwassererkundung, Umweltmonitoring, Feuchtgebietskartierung, räumliches Modellieren, Landnutzungs‑/Landbedeckungsänderungsanalysen und digitale Landverwaltung. Ich bin versiert im Umgang mit branchenüblichen Werkzeugen wie ArcGIS, QGIS, ERDAS Imagine, ILWIS, ENVI, PCI Geomatica, RockWorks, Google Earth und Python.",
+    aboutP3: "Ich bin außerdem ein veröffentlichter Forscher mit mehreren begutachteten Fachartikeln und internationalen Konferenzbeiträgen. Zu meinen Forschungsbeiträgen gehören Grundwasserzielbestimmung mittels Satellitenbildern, automatische Lineamentextraktion, Schummerungsanalyse und Deep‑Learning‑Anwendungen in den Geowissenschaften. Ich habe bedeutende Auszeichnungen erhalten, darunter den Best Student Paper Award beim XVIII International Congress for Mine Surveying (Xuzhou, China).",
+    aboutP4: "Neben Forschung und Projektausführung engagiere ich mich stark für Capacity Building. Ich habe geospatial‑intelligence Seminare, GIS‑Schulungsworkshops und professionelle Weiterbildungsprogramme für Studierende, Regierungsbehörden und Fachkräfte geleitet—und damit die geospatialen Kompetenzen und die digitale Landverwaltung in Nigeria und China gestärkt.",
+    aboutP5: "Dieses Portfolio zeigt meinen Weg durch Geologie, Geodatenwissenschaft, Forschung, Lehre und berufliche Praxis—und präsentiert die Karten, Projekte, Veröffentlichungen und Engagements, die mein Engagement für den Einsatz geospatialer Technologien zur nachhaltigen Entwicklung und fundierten Entscheidungsfindung widerspiegeln.",
 
     skillsHeading: "Technische Fähigkeiten & Kompetenzen",
-    skillsSubtext: "Eine umfassende Mischung aus geospatialen, analytischen und technischen Fähigkeiten.",
+    skillsSubtext: "Eine umfassende Mischung aus geospatialen, analytischen und technischen Fähigkeiten, entwickelt durch praktische Feldarbeit, akademische Forschung, professionelle Schulungen und angewandte GIS‑/Fernerkundungsprojekte.",
 
-    skill1: "GIS-Software: ArcGIS Pro, ArcGIS Server, ArcMap, QGIS, ILWIS, PCI Geomatica, RockWorks",
+    skill1: "GIS‑Software: ArcGIS Pro, ArcGIS Server, ArcMap, QGIS, ILWIS, PCI Geomatica, RockWorks",
     skill2: "Fernerkundungswerkzeuge: ERDAS Imagine, ENVI, Google Earth",
-    skill3: "Geodaten-Techniken: räumliche Analyse, Digitalisierung, GPS, Bildverarbeitung, Kartierung",
-    skill4: "Programmierung & Automatisierung: Python, Datenanalyse, Visualisierung",
-    skill5: "Datenmanagement: SQL, Datenbankdesign, räumliche Datenbanken, Metadatenverwaltung",
-    skill6: "Professionelle Werkzeuge: Microsoft Office, Berichtserstellung, Kartenproduktion"
+    skill3: "Geodaten‑Techniken: räumliche Analyse, Digitalisierung, GPS‑Bedienung, Bildverarbeitung, Landnutzungskartierung, Ground‑Truthing, Georeferenzierung",
+    skill4: "Programmierung & Automatisierung: Python, geospatial Datenanalyse, Visualisierung, Aufgabenautomatisierung",
+    skill5: "Datenmanagement: SQL‑Abfragen, Datenbankdesign, räumliche Datenbanken, Metadatenverwaltung",
+    skill6: "Professionelle Werkzeuge: Microsoft Office, Berichtserstellung, Kartenproduktion, Workflow‑Dokumentation"
   }
 };
 
@@ -97,13 +85,6 @@ function applyTranslations() {
     "nav-internship": "navInternship",
     "nav-projects": "navProjects",
     "nav-social": "navSocial",
-
-    "home-title": "homeTitle",
-    "home-p1": "homeP1",
-    "home-p2": "homeP2",
-    "home-p3": "homeP3",
-    "home-project-title": "homeProjectTitle",
-    "home-project-text": "homeProjectText",
 
     "footer-heading": "footerHeading",
     "footer-subtext": "footerSubtext",
